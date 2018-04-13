@@ -1,17 +1,19 @@
 // Pas de constructeur sur la classe. 
-// 
 package springboot.config.properties;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:mesProprietes.properties")
-@ConfigurationProperties(prefix="myApp")
+@ConfigurationProperties(prefix="myapp")
 public  class SpringBootForConfigurationProperties {
 
+	final static Logger logger = LoggerFactory.getLogger(SpringBootForConfigurationProperties.class);
+	
     private String host;
         
     public String getHost() {
@@ -24,6 +26,7 @@ public  class SpringBootForConfigurationProperties {
 	
 	@Override
     public String toString() {
+		logger.debug("Debug " + host);
         return " host='" + host + '}';
     }
     

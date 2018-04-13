@@ -9,7 +9,6 @@ import springboot.config.properties.SpringBootForConfigurationProperties;
 public class SpringBootForCommandLiner implements CommandLineRunner { 
 
 	private SpringBootForConfigurationProperties app;
-	
 	public SpringBootForCommandLiner() {
 		
 	}

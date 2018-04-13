@@ -6,11 +6,11 @@ package springboot.config.listener;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 
-public class HelloApplicationListener implements ApplicationListener<ApplicationEvent> {
+public class SpringBootForConfigurationListener implements ApplicationListener<ApplicationEvent> {
 
 	@Override
 	public void onApplicationEvent(ApplicationEvent event) {
-		System.out.println(" Event reçu par l'application springBoot :  " + event.getClass().getName());
+		System.out.println(" Event : " + event.getClass().getName());
 	}
 
 }
